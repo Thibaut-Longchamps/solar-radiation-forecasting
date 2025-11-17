@@ -1,0 +1,19 @@
+# Astro Runtime includes the following pre-installed providers packages: https://www.astronomer.io/docs/astro/runtime-image-architecture#provider-packages
+scikit-learn
+lightgbm
+aiobotocore               # Pour des appels asynchrones avec AWS
+boto3                     # SDK pour interagir avec les services AWS (S3, EC2, etc.)
+botocore                  # Composant de bas niveau pour gérer les requêtes HTTP et l'authentification avec AWS
+joblib==1.4.2             # Enregistrer les modèles
+matplotlib==3.9.2         # Bibliothèque pour des graphiques et visualisations
+# mlflow==2.17.0          # (commenté) Suivi des expériences de ML et gestion des modèles si nécessaire
+numpy==1.26.4             # Calcul scientifique et manipulation de tableaux          # Gestion et analyse des données, structuration en DataFrames
+plotly==5.24.1            # Bibliothèque de visualisation
+protobuf==3.20.0          # Utilisé pour la sérialisation de données, nécessaire avec TensorFlow et MLflow
+psycopg2-binary==2.9.10   # Connexion à une base de données PostgreSQL
+python-dotenv==1.0.0      # Chargement des variables d'environnement depuis un fichier .env
+requests==2.32.3          # Requêtes HTTP, utilisé pour appeler des API
+scikit-learn==1.5.2       # Machine learning, avec des outils de classification, régression, clustering, etc.
+seaborn==0.13.2           # Visualisation statistique basée sur Matplotlib
+# tensorflow==2.17.0      # (commenté) Framework de machine learning, pour des modèles si nécessaire
+xgboost==2.1.2   

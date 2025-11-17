@@ -1,0 +1,36 @@
+version: '3'
+services:
+
+  postgres:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB:  admin
+    ports:
+      - "5555:5432"
+    volumes:
+      - /media/biline/docker2/docker-data/DockerDesktop/volumes/postgres_data/_data
+
+
+volumes:
+  postgres_data:
+
+webserver:
+  volumes:
+    - /media/biline/docker2/docker-data/DockerDesktop/dags:/usr/local/airflow/dags
+    - /media/biline/docker2/docker-data/DockerDesktop/src:/src
+    - /media/biline/docker2/docker-data/DockerDesktop/data:/usr/local/airflow/data
+    - /media/biline/docker2/docker-data/DockerDesktop/data:/usr/local/airflow/models
+    - /media/biline/docker2/docker-data/DockerDesktop/data:/usr/local/airflow/predictions
+
+scheduler:
+  volumes:
+    - /media/biline/docker2/docker-data/DockerDesktop/dags:/usr/local/airflow/dags
+    - /media/biline/docker2/docker-data/DockerDesktop/src:/src
+    - /media/biline/docker2/docker-data/DockerDesktop/data:/usr/local/airflow/data
+    - /media/biline/docker2/docker-data/DockerDesktop/data:/usr/local/airflow/models
+    - /media/biline/docker2/docker-data/DockerDesktop/data:/usr/local/airflow/predictions
+
+   
